@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --text-regular-normal: Roboto;
+
+  /* font sizes */
+  --text-regular-normal-size: 16px;
+  --font-size-mid-8: 17.8px;
+
+  /* Colors */
+  --white: #fff;
+  --color-aliceblue: #e6f7ff;
+  --primary: #0077b5;
+  --black: #000;
+
+  /* Gaps */
+  --gap-16xl-6: 35.6px;
+  --gap-7xl-7: 26.7px;
+
+  /* Paddings */
+  --padding-sm-3: 13.3px;
+  --padding-7xl-7: 26.7px;
+  --padding-xs: 12px;
+  --padding-5xl: 24px;
+}

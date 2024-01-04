@@ -1,6 +1,6 @@
 # app.py
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from CloudGuardMLModel.mainmodel import chat_with_ml
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ main_model = None  # Placeholder for the machine learning model
 
 @app.route('/')
 def index():
-    return "Welcome to the Flask App!"
+    return render_template("index.html")
 
 @app.route('/askme', methods=['POST'])
 def process_text():
