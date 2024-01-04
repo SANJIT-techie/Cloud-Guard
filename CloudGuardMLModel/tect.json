@@ -1,0 +1,110 @@
+{
+  "intents": [
+    {
+      "tag": "cmk",
+      "patterns": [
+        "IDENTIFY",
+        "RECOVER",
+        "KMS",
+        "CUSTOMER",
+        "MASTER",
+        "KEYS",
+        "CMK",
+        "SCHEDULED",
+        "DELETION"
+      ],
+      "responses": {
+        "Portal": "1.Sign in to the AWS Management Console.\n2.Navigate to KMS dashboard.\n3.In the left navigation panel, click Customer Managed Keys.\n4.Select the appropriate AWS region from the Filter menu.\n5.Under Status column: check for any keys scheduled for deletion. If the current status is Pending Deletion, the key is scheduled for deletion.\n6. Under status column press 'Cancel Key Deletion' in order to cancel key deletion.\n7.Repeat step no. 5 and 6 for all AWS regions.",
+        "terminal": "FOR terminal, you can use the following command: [aws kms cancel-key-deletion --key-id KEYID  ]",
+        "terraform": "",
+        "references": [
+          {
+            "link": "https://docs.aws.amazon.com/kms/latest/developerguide/deleting-keys.html"
+          },
+          {
+            "link": "https://docs.aws.amazon.com/cli/latest/reference/kms/cancel-key-deletion.html"
+          }
+        ]
+      },
+      "context_set": ""
+    },
+    {
+      "tag": "sql database",
+      "patterns": [
+        "ENSURE",
+        "PRODUCTION",
+        "SQL",
+        "DATABASE",
+        "INSTANCES",
+        "CONFIGURED",
+        "AUTOMATICALLY",
+        "FAIL",
+        "ANOTHER",
+        "ZONE",
+        "SELECTED",
+        "CLOUD",
+        "REGION"
+      ],
+      "responses": {
+        "Portal": "1.Go to Cloud SQL instances: https://console.cloud.google.com/sql/instances.\n2.Click on the instance that you want to remediate.\n3.Click on the 'Edit' button on the top menu.\n4.Go to the 'Choose region and zonal availability' section.\n5.Under 'Zonal availability', select 'Multiple zones (Highly available)'.\n6.Click 'Save' to apply the changes.\n7.Repeat steps 2 - 6 for every Cloud SQL instance in the project.\n8.Repeat steps 1 - 7 for every project in your GCP account.",
+        "terminal": "FOR terminal, you can use the following command: [gcloud sql instances patch EXAMPLE_CLOUD_SQL_INSTANCE --availability-type REGIONAL ]",
+        "terraform": "resource \"google_sql_database_instance\" \"EXAMPLE_CLOUDSQL_INSTANCE\" {\n  settings {\n    ...\n    availability_type = \"REGIONAL\"\n    ...\n  }\n}",
+        "references": [
+          {
+            "link": "https://cloud.google.com/sql/docs/mysql/configure-ha#gcloud"
+          },
+          {
+            "link": "https://cloud.google.com/sdk/gcloud/reference/sql/instances/patch"
+          },
+          {
+            "link": "https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/sql_database_instance"
+          }
+        ]
+      },
+      "context_set": ""
+    },
+    {
+      "tag": "aws rds",
+      "patterns": [
+        "ENSURE",
+        "AWS",
+        "RDS",
+        "INSTANCES",
+        "AUTOMATIC",
+        "BACKUP",
+        "SET"
+      ],
+      "responses": {
+        "Portal": "1.Sign in to the AWS Management Console and open the Amazon RDS console at https://console.aws.amazon.com/rds/. \n2.In the navigation pane, choose Databases, and then choose the DB instance that you want to modify.\n3.Choose Modify.\n4.In 'Backup' section, a. From the 'Backup Retention Period' drop-down list, select the number of days to retain automatic backups of this DB instance b. Select 'Start Time' and 'Duration' in 'Backup window', which is the daily time range (in UTC) during which automated backups will be performed\n5.Click 'Continue'\n6.On the confirmation page, select 'Modify DB Instance' to save your changes.",
+        "terminal": "FOR terminal, you can use the following command: [aws rds modify-db-instance --region REGION --db-instance-identifier DBINSTANCE --backup-retention-period NUMBER_OF_DAYS --apply-immediately]",
+        "terraform": {
+          "resource": "aws_db_instance",
+          "default": {
+            "allocated_storage": 10,
+            "engine": "mysql",
+            "engine_version": "5.7",
+            "instance_class": "db.t3.micro",
+            "name": "mydb",
+            "username": "foo",
+            "password": "foobarbaz",
+            "parameter_group_name": "default.mysql5.7",
+            "skip_final_snapshot": true,
+            "backup_retention_period": 5
+          }
+        },
+        "references": [
+          {
+            "link": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html"
+          },
+          {
+            "link": "https://aws.amazon.com/rds/faqs/"
+          },
+          {
+            "link": "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/db_instance"
+          }
+        ]
+      },
+      "context_set": ""
+    }
+  ]
+}
