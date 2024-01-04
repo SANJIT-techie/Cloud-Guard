@@ -12,61 +12,69 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
-  
   </head>
   <body>
     <div class="thumbnail">
       <div class="header-26">
-        <img class="gradiant-1-icon" alt="" src="../static/img/gradiant-1@2x.png" />
+        <img
+          class="gradiant-1-icon"
+          alt=""
+          src="../static/img/gradiant-1@2x.png"
+        />
 
         <div class="column">
           <div class="content">
-            <b class="medium-length-hero">Empower Your Studies with AI Chatbot</b>
+            <b class="medium-length-hero"
+              >Empower Your Studies with AI Chatbot</b
+            >
             <div class="lorem-ipsum-dolor">
               Get instant answers and personalized study recommendations with
               our AI-powered research and study chatbot.
             </div>
           </div>
-          
         </div>
         <div class="placeholder-image"></div>
         <div class="container">
           <div class="content1">
-            <img class="logo-icon" alt="" src="../static/img/bourntec__2_-1-removebg-preview.png" />
+            <img
+              class="logo-icon"
+              alt=""
+              src="../static/img/bourntec__2_-1-removebg-preview.png"
+            />
           </div>
-        
         </div>
-        
-         
-          
-          <div class="box">
-            <div class="row">
-             <div class="col-sm-12">
-            <div class="btns">
+
+        <div class="box">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="btns">
                 <ul>
-                    <li><button type="button">Portal</button></li>
-                    <li><button>Terminal</button></li>
-                    <li><button>Terraform</button></li>
-                    <li><button>References</button></li>
+                  <li><button type="button">Portal</button></li>
+                  <li><button>Terminal</button></li>
+                  <li><button>Terraform</button></li>
+                  <li><button>References</button></li>
                 </ul>
+              </div>
             </div>
-             </div>
-            </div>
+          </div>
+          <!-- Form submission -->
+          <form method="post">
             <div class="row">
-                <div class="col-sm-10 bar">
-                <input type="text" placeholder="A Static website on AWS">
-                </div>
-                <div class="col-sm-2 genbtn">
-                 <button type="button">Generate Program</button>
-                </div>
+              <div class="col-sm-10 bar">
+                <input id="searchBox" type="text" name="searchtext" placeholder="A Static website on AWS" />
+              </div>
+              <div class="col-sm-2 genbtn">
+                <button type="button" onclick="generateProgram(param1)">Generate Program</button>
+              </div>
             </div>
+          </form>
+          <!-- Form end -->
         </div>
-        </div>
+      </div>
 
-
-         <!--search box-->
-        </div>
-      
-    
+      <!--search box-->
+    </div>
   </body>
+  <script src="../static/JS-Package/axios.min.js"></script>
+  <script src="../static/cloudguard.js"></script>
 </html>
