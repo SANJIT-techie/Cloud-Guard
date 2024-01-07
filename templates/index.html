@@ -30,12 +30,11 @@
       <!-- <div class="placeholder-image"></div> -->
       <div class="container">
         <div class="content1">
-          <img class="logo-icon" alt="" src="../static/img/bourntec__2_-1-removebg-preview.png" />
+          <img class="logo-icon" alt="" src="../static/img/bournteclogo.jpg" />
         </div>
       </div>
 
       <div class="box">
-
         <!-- Form submission -->
         <form onsubmit="generateProgram(event)">
           <div class="row">
@@ -49,16 +48,36 @@
         </form>
         <!-- Form end -->
         <div class="resultBox" style="font-size: 16px">
-
-          <div class="tabncode">
-            <div class="row" style="margin-top: 119px;">
+          <div class="tabncode" style="
+                background-color: #74b6d5cf;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 10px;
+              ">
+            <div class="row" style="margin-top: 119px">
               <div class="col-sm-12">
                 <div class="btns">
-                  <ul>
-                    <li><button class="tab" type="button">Portal</button></li>
-                    <li><button class="tab" type="button">Terminal</button></li>
-                    <li><button class="tab" type="button">Terraform</button></li>
-                    <li><button class="tab" type="button">References</button></li>
+                  <ul class="tab">
+                    <li>
+                      <button  class="tablinks" type="button" onclick="openTab(event, 'portal')">
+                        Portal
+                      </button>
+                    </li>
+                    <li>
+                      <button  class="tablinks" type="button" onclick="openTab(event, 'terminal')">
+                        Terminal
+                      </button>
+                    </li>
+                    <li>
+                      <button  class="tablinks" type="button" onclick="openTab(event, 'terraform')">
+                        Terraform
+                      </button>
+                    </li>
+                    <li>
+                      <button  class="tablinks" type="button" onclick="openTab(event, 'references')">
+                        References
+                      </button>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -66,13 +85,63 @@
 
             <div class="code-wrapper">
               <pre>
-                    <code id="code" class="language-javascript">
-                      Your result here
-                    </code>
+                <div
+                  id="portal"
+                  class="tabcontent"
+                  style="
+                    color: #aaaaaa;
+                    background-color: #2d2d2d;
+                    overflow: scroll;
+                    border-radius: 10px;
+                  "
+                >
+                  Your result here
+                </div>
+              </pre>
+              <pre>
+                <div
+                  id="terminal"
+                  class="tabcontent"
+                  style="
+                    color: #aaaaaa;
+                    background-color: #2d2d2d;
+                    overflow: scroll;
+                    border-radius: 10px;
+                  "
+                >
+                  Your result here
+                </div>
+              </pre>
+              <pre>
+                <div
+                  id="terraform"
+                  class="language-javascript tabcontent"
+                  style="
+                    color: #aaaaaa;
+                    background-color: #2d2d2d;
+                    overflow: scroll;
+                    border-radius: 10px;
+                  "
+                >
+                  Your result here
+                </div>
+              </pre>
+              <pre>
+                <div
+                  id="references"
+                  class="tabcontent language-javascript"
+                  style="
+                    color: #aaaaaa;
+                    background-color: #2d2d2d;
+                    overflow: scroll;
+                    border-radius: 10px;
+                  "
+                >
+                  Your result here
+                </div>
               </pre>
             </div>
           </div>
-
         </div>
       </div>
     </div>
