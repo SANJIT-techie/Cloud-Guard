@@ -27,12 +27,12 @@
 }
 .button {
   position: relative;
-        line-height: 150%;
-        background-color: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 16px;
+  line-height: 150%;
+  background-color: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
 }
 .component-3,
 .component-5 {
@@ -180,59 +180,56 @@
   position: relative;
   background-color: var(--white);
   width: 100%;
-  height: 960px;
+  height: 1053px;
   overflow: hidden;
-  text-align: center;
   font-size: 62.2px;
   color: var(--white);
   font-family: var(--text-regular-normal);
 }
 
-
-
-ul{
+ul {
   list-style: none;
   display: flex;
 }
-li{
+li {
   padding: 0 7px;
 }
-.box{
+.box {
   width: 70%;
-        position: absolute;
-        margin: 40px;
-        /* border: 4px solid #c2c9ad; */
-        padding: 12px 12px;
-        background-color: #a9d8e9;
-        border-radius: 10px;
-        box-shadow:0 0 6px 0px #7b7a7a; 
-        margin-top: 29%;
-        margin-left: 118px;
-        height: 136px;
-  }
+  position: absolute;
+  margin: 40px;
+  /* border: 4px solid #c2c9ad; */
+  padding: 12px 12px;
+  background-color: #a9d8e9;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 0px #7b7a7a;
+  margin-top: 29%;
+  margin-left: 118px;
+  height: 136px;
+}
 
-  .btns{
-    margin-top: -100px;
-  }
-.btn{
+.btns {
+  margin-top: -100px;
+}
+.btn {
   padding: 11px 0 11px 0;
 }
 
-.bar{
+.bar {
   margin-top: -85px;
 }
-ul{
+ul {
   margin-left: -41px;
 }
-.bar input{
+.bar input {
   width: 99%;
-        background: white;
-        height: 40px;
-        color: rgb(0, 0, 0);
-        border: none;
-        padding-left: 8px;
+  background: white;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding-left: 8px;
 }
-li button{
+li button {
   background-color: #00b0ffcf;
   border: none;
   padding: 8px 21px;
@@ -240,14 +237,44 @@ li button{
   color: white;
   font-weight: 600;
 }
-.genbtn button{
+.genbtn button {
   border-radius: 4px;
-        padding: 9px 12px;
-        background-color: #00b0ffcf;
-        border: none;
-        float: right;
-        margin-top: 11px;
-        margin-right: -4px;
-        font-weight: bold;
-        color:white;
+  padding: 9px 12px;
+  background-color: #00b0ffcf;
+  border: none;
+  float: right;
+  margin-top: 11px;
+  margin-right: -4px;
+  font-weight: bold;
+  color: white;
+}
+
+.resultBox {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+  height: 283%;
+  background-color: #00b0ffcf;
+  position: relative;
+  overflow: auto;
+  margin-top: 70px;
+  border-radius: 10px;
+  text-align: unset;
+}
+
+.code-wrapper {
+  position: relative;
+  text-align: left;
+  padding: 5px;
+}
+
+#code {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+pre{
+  border-radius: 10px;
 }

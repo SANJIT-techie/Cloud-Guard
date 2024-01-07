@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="../static/global.css" />
     <link rel="stylesheet" href="../static/index.css" />
+    <link rel="stylesheet" href="../static/prism.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -24,16 +25,14 @@
 
         <div class="column">
           <div class="content">
-            <b class="medium-length-hero"
-              >Empower Your Studies with AI Chatbot</b
-            >
+            <b class="medium-length-hero">Empower Your work with AI Chatbot</b>
             <div class="lorem-ipsum-dolor">
-              Get instant answers and personalized study recommendations with
-              our AI-powered research and study chatbot.
+              Get instant answers and personalized code recommendations with our
+              AI-powered research and study chatbot.
             </div>
           </div>
         </div>
-        <div class="placeholder-image"></div>
+        <!-- <div class="placeholder-image"></div> -->
         <div class="container">
           <div class="content1">
             <img
@@ -69,17 +68,25 @@
                 />
               </div>
               <div class="col-sm-2 genbtn">
-                <button type="submit">Generate Program</button>
+                <button type="submit">Generate</button>
               </div>
             </div>
           </form>
           <!-- Form end -->
+          <div class="resultBox" style="font-size: 16px">
+            <div class="code-wrapper">
+              <pre>
+                    <code id="code" class="language-javascript">
+                      Your result here
+                    </code>
+              </pre>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!--search box-->
     </div>
   </body>
   <script src="../static/JS-Package/axios.min.js"></script>
+  <script src="../static/JS-Package/prism.js"></script>
   <script src="../static/cloudguard.js"></script>
 </html>

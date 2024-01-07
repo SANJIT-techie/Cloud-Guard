@@ -13,7 +13,10 @@ function generateProgram(e) {
       data
     )
     .then((response) => {
-      console.log(response.data);
+      const terraformCode = response.data;
+      console.log(response.data.res.terraform);
+      const jsonString = JSON.stringify(response.data.res.terraform, null, 2);
+      document.getElementById("code").innerText = jsonString;
     })
     .catch((error) => {
       console.error("Error making API request:", error);
