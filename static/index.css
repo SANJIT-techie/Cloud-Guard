@@ -205,18 +205,19 @@ li {
   box-shadow: 0 0 6px 0px #7b7a7a;
   margin-top: 29%;
   margin-left: 118px;
-  height: 136px;
+  height: 106px;
 }
 
 .btns {
   margin-top: -100px;
+  margin-left: 16px;
 }
 .btn {
   padding: 11px 0 11px 0;
 }
 
 .bar {
-  margin-top: -85px;
+  margin-top: -20px;
 }
 ul {
   margin-left: -41px;
@@ -230,7 +231,7 @@ ul {
   padding-left: 8px;
 }
 li button {
-  background-color: #00b0ffcf;
+  background-color: #363e47;
   border: none;
   padding: 8px 21px;
   border-radius: 4px;
@@ -244,7 +245,7 @@ li button {
   border: none;
   float: right;
   margin-top: 11px;
-  margin-right: -4px;
+  margin-right: 1px;
   font-weight: bold;
   color: white;
 }
@@ -259,7 +260,7 @@ li button {
   background-color: #00b0ffcf;
   position: relative;
   overflow: auto;
-  margin-top: 70px;
+  margin-top: 85px;
   border-radius: 10px;
   text-align: unset;
 }
