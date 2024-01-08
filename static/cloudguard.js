@@ -12,7 +12,7 @@ function generateProgram(e) {
 
   axios
     .post(
-      "https://obscure-waddle-xg9jqjp55xxcvq-5000.app.github.dev/askme",
+      "https://miniature-broccoli-q59wgw4qwjwf6w57-5000.app.github.dev/askme",
       data
     )
     .then((response) => {
