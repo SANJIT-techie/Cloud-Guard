@@ -12,7 +12,7 @@ function generateProgram(e) {
 
   axios
     .post(
-      "https://miniature-broccoli-q59wgw4qwjwf6w57-5000.app.github.dev/askme",
+      "http://127.0.0.1:5000/askme",
       data
     )
     .then((response) => {

@@ -1,9 +1,9 @@
 .gradiant-1-icon {
   position: absolute;
   top: 0;
-  left: calc(50% - 799.5px);
-  width: 1599.55px;
-  height: 1137.46px;
+  /* left: calc(50% - 799.5px); */
+  width: 1658.55px;
+  height: 1170.46px;
   overflow: hidden;
   object-fit: cover;
 }
@@ -87,7 +87,9 @@
   overflow: hidden;
   flex-shrink: 0;
   object-fit: cover;
-  margin-left: -18px;
+  margin-left: -51px;
+  margin-top: -1px
+  
 }
 .content1 {
   flex: 1;
